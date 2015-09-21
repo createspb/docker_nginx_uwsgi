@@ -5,6 +5,7 @@ MAINTAINER Vladimir Shulyak <vladimir@shulyak.net>
 RUN add-apt-repository ppa:nginx/stable && \
     apt-get update && \
     apt-get install -y --force-yes nginx=1.8.* && \
+    rm /etc/nginx/sites-enabled/default && \
     mkdir /etc/service/nginx
 
 # Nginx service
